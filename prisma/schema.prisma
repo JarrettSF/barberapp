@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Barber {
+id String @id @default(uuid())
+firstName String
+lastName String
+shopName String
+phoneNumber String
+createdAt DateTime @default(now())
+
+}
+
+model Client {
+id String @id @default(uuid())
+firstName String
+lastName String
+address String
+phoneNumber String
+createdAt DateTime @default(now())
+
+}
+
+model password {
+  id String @id @default(uuid())
+  userName String
+  password String
+}
+
+model Haircut {
+id String @id @default(uuid())
+regular String
+fade String
+shave String
+women String
+children String
+senior String 
+
+}
+
+model appointment {
+  
+id String @id@default(uuid())
+dateCreated DateTime
+startTime DateTime
+endTime DateTime
+
+}
