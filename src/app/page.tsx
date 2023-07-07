@@ -27,6 +27,7 @@ export default async function Page() {
   New Barbers
     </Link>
 
+
     </article>
     <div className="flex justify-center"><button 
   type="submit"
@@ -34,4 +35,6 @@ export default async function Page() {
   hover:bg-slate-700 focus-within:bg-slate-700 outline-none">
      Log in
      </button></div>
+  
+   
   </>}
